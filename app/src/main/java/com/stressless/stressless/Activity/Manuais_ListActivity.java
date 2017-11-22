@@ -32,12 +32,12 @@ import java.util.ArrayList;
 public class Manuais_ListActivity extends AppCompatActivity {
 
     private ListView listViewManuais;
-    private ArrayAdapter<ManuaisEnt> adapter;
+    private ArrayAdapter<ManuaisEnt> adapter2;
     private ArrayList<ManuaisEnt> manuaisList;
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReference2;
     private ValueEventListener valueEventListener2;
     private Button btnVoltarTela4;
-    private AlertDialog alertDialog;
+    private AlertDialog alertDialog2;
     private ManuaisEnt manuaisEntExcluir;
 
     @Override
@@ -47,11 +47,11 @@ public class Manuais_ListActivity extends AppCompatActivity {
 
         manuaisList = new ArrayList<>();
         listViewManuais = (ListView) findViewById(R.id.listViewManuais);
-        adapter = new ArrayAdapter<ManuaisEnt>(Manuais_ListActivity.this, android.R.layout.simple_list_item_1 , manuaisList);
-        listViewManuais.setAdapter(adapter);
+        adapter2 = new ArrayAdapter<ManuaisEnt>(Manuais_ListActivity.this, android.R.layout.simple_list_item_1 , manuaisList);
+        listViewManuais.setAdapter(adapter2);
 
 
-        databaseReference = ConfiguraFirebase.getReferenciaDB().child("adddadosmanuais");
+        databaseReference2 = ConfiguraFirebase.getReferenciaDB().child("adddadosmanuais");
         valueEventListener2 = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -60,7 +60,7 @@ public class Manuais_ListActivity extends AppCompatActivity {
                     ManuaisEnt manuaisEntNovo = dados2.getValue(ManuaisEnt.class);
                     manuaisList.add(manuaisEntNovo);
                 }
-                adapter.notifyDataSetChanged();
+                adapter2.notifyDataSetChanged();
             }
 
             @Override
@@ -80,7 +80,7 @@ public class Manuais_ListActivity extends AppCompatActivity {
         listViewManuais.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                manuaisEntExcluir = adapter.getItem(position);
+                manuaisEntExcluir = adapter2.getItem(position);
                 AlertDialog.Builder builder = new AlertDialog.Builder(Manuais_ListActivity.this);
                 builder.setTitle("Confirmar exclusão?");
                 builder.setMessage("Você deseja excluir os dados?");
@@ -88,8 +88,8 @@ public class Manuais_ListActivity extends AppCompatActivity {
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        databaseReference = ConfiguraFirebase.getReferenciaDB().child("adddadosmanuais");
-                        databaseReference.child(manuaisEntExcluir.getNumeroBrinco2().toString()).removeValue();
+                        databaseReference2 = ConfiguraFirebase.getReferenciaDB().child("adddadosmanuais");
+                        databaseReference2.child(manuaisEntExcluir.getNumeroBrinco2().toString()).removeValue();
                         Toast.makeText(Manuais_ListActivity.this, "Exclusão realizada com sucesso!", Toast.LENGTH_LONG).show();
                     }
                 });
@@ -100,8 +100,8 @@ public class Manuais_ListActivity extends AppCompatActivity {
                         Toast.makeText(Manuais_ListActivity.this, "Exclusão cancelada com sucesso!", Toast.LENGTH_LONG).show();
                     }
                 });
-                alertDialog = builder.create();
-                alertDialog.show();
+                alertDialog2 = builder.create();
+                alertDialog2.show();
             }
         });
     }
@@ -114,12 +114,12 @@ public class Manuais_ListActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        databaseReference.removeEventListener(valueEventListener2);
+        databaseReference2.removeEventListener(valueEventListener2);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        databaseReference.addValueEventListener(valueEventListener2);
+        databaseReference2.addValueEventListener(valueEventListener2);
     }
 }
