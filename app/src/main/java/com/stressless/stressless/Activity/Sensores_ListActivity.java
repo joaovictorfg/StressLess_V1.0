@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.stressless.stressless.Adapter.SensoresAdapter;
 import com.stressless.stressless.DAO.ConfiguraFirebase;
 import com.stressless.stressless.R;
+import com.stressless.stressless.Users.ManuaisEnt;
 import com.stressless.stressless.Users.SensoresEnt;
 
 import java.util.ArrayList;
@@ -81,7 +82,7 @@ public class Sensores_ListActivity extends AppCompatActivity {
                 sensoresEntExcluir = adapter.getItem(position);
                 AlertDialog.Builder builder = new AlertDialog.Builder(Sensores_ListActivity.this);
                 builder.setTitle("Confirmar exclusão?");
-                builder.setMessage("Você deseja excluir os dados - " + sensoresEntExcluir.getNumeroBrinco().toString() + " - ?");
+                builder.setMessage("Você deseja excluir os dados?");
 
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
@@ -120,4 +121,5 @@ public class Sensores_ListActivity extends AppCompatActivity {
         super.onStart();
         databaseReference.addValueEventListener(valueEventListener);
     }
+
 }

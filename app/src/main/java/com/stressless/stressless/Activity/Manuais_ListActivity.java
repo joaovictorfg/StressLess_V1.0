@@ -83,7 +83,7 @@ public class Manuais_ListActivity extends AppCompatActivity {
                 manuaisEntExcluir = adapter.getItem(position);
                 AlertDialog.Builder builder = new AlertDialog.Builder(Manuais_ListActivity.this);
                 builder.setTitle("Confirmar exclusão?");
-                builder.setMessage("Você deseja excluir os dados - " + manuaisEntExcluir.getNumeroBrinco2().toString() + " - ?");
+                builder.setMessage("Você deseja excluir os dados?");
 
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
