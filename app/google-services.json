@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "595050129488",
+    "firebase_url": "https://streess-b564d.firebaseio.com",
+    "project_id": "streess-b564d",
+    "storage_bucket": "streess-b564d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595050129488:android:cf37b9a37d6da1ff",
+        "android_client_info": {
+          "package_name": "com.stressless.stressless"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595050129488-mlc4759am6ahn6rh78gmkq03ljfvgi2m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stressless.stressless",
+            "certificate_hash": "c9ef13ead8bab769bb5bb5d0386aa32e8db642d1"
+          }
+        },
+        {
+          "client_id": "595050129488-lp0eeahiti2cclap2v9aprvnkspnbs1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtm7HQcjeF6LjJ3WJuzsc6-kdzFcErjxc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595050129488-lp0eeahiti2cclap2v9aprvnkspnbs1q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

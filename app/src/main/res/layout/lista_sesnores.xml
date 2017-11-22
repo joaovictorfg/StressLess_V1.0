@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textBrinco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="37dp"
+        android:text="Brinco" />
+
+    <TextView
+        android:id="@+id/textFR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textBrinco"
+        android:layout_marginTop="16dp"
+        android:text="Frequência Respiratoria" />
+
+    <TextView
+        android:id="@+id/textTR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textFR"
+        android:layout_marginTop="25dp"
+        android:text="Temperatura Retal" />
+</RelativeLayout>

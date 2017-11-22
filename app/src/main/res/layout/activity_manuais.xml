@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#EEE9E9"
+    tools:context="com.stressless.stressless.Activity.ManuaisActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:text="Número do brinco do animal"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/editBrinco2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:ems="10"
+        android:hint="Digite o número do brinco"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editBrinco2"
+        android:layout_marginTop="26dp"
+        android:text="Frequência Respiratória do animal"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/editFR2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:hint="Digite o valor da frequência respiratória"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTR2"
+        android:layout_alignParentStart="true"
+        android:text="Temperatura Retal do animal"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/editTR2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Digite o valor da temperatura retal"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnSalvar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="81dp"
+        android:background="#ef1137"
+        android:text="Salvar" />
+
+    <Button
+        android:id="@+id/btnVoltarTela2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:background="#ef1137"
+        android:text="Voltar" />
+
+</RelativeLayout>

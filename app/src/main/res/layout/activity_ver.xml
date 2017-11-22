@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE9E9"
+    android:gravity="center"
+    tools:context="com.stressless.stressless.Activity.VerActivity">
+
+    <Button
+        android:id="@+id/btnVerSensores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:background="#ef1137"
+        android:text="Vizualizar dados sensores" />
+
+    <Button
+        android:id="@+id/btnVerManuais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnVerSensores"
+        android:layout_marginTop="58dp"
+        android:background="#ef1137"
+        android:text="Vizualizar dados manuais" />
+
+</RelativeLayout>
